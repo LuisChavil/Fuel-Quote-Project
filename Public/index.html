@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Homepage</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script src="script.js" defer>
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> </head>
+
+<body>
+	<button class="tablink" onclick="openPage('Home', this, 'orange')" id="homeTab">Home</button>
+	<button class="tablink" onclick="openPage('Contact', this, 'orange')" id = "contactTab">Contact Us</button>
+	<button class="tablink" onclick="openPage('Account', this, 'orange')"id = "accountTab">Account</button>
+	<button class="tablink" onclick="openPage('About', this, 'orange')" id = "aboutTab">About</button>
+
+	<div id="Home" class="tabcontent">
+		<h3>Welcome to ExxonMobil</h3>
+		<p> This website was designed by the members of Group 16. Please refer to the information listed below regarding our website! </p>
+		<h3 style="text-align:center;">Quick Links</h3>
+		<div class="timeline">
+			<div class="container left">
+				<div style="text-align:center" class="content">
+					<h2><a href="Quote.html"> Fuel Quote </a></h2>
+					<p>This is our purchase section, where you'll be able to obtain fuel quotes and see your fuel quote history. To view quote history, please click down below! </p>
+          <a href="History.html">My fuel Quote History</a> 
+        </div>
+			</div>
+			<div class="container right">
+				<div style="text-align:center" class="content">
+					<h2><a href="#" onclick="openPage('Account', this)">Account</a></h2>
+					<p>This is where you can access and manage your account, or register for an account</p>
+				</div>
+			</div>
+			<div class="container left">
+				<div style="text-align:center" class="content">
+					<h2><a href="#" onclick="openPage('About', this)">About Us</a></h2>
+					<p>This is where you can find out more information about us, the creators, as well as our vision for this platform</p>
+				</div>
+			</div>
+			<div class="container right">
+				<div style="text-align:center" class="content">
+					<h2><a href="#" onclick="openPage('Contact', this)">Contact Us</a></h2>
+					<p>This is where you can reach out to us with any questions, concerns or feedback</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="Contact" class="tabcontent">
+		<div style="width: 800px; margin: 1em auto 3em auto;">
+			<h1>Contact Us</h1>
+			<form id="form" action="./index" method="POST">
+				<h3>Send us a message</h3>
+				<div class="form-group">
+					<label for="fname"><i class="fa fa-user"></i> Full Name</label>
+					<input type="text" id="fname" name="fullname" placeholder="John M. Doe"> </div>
+				<div class="form-group">
+					<label for="email"><i class="fa fa-envelope"></i> Email</label>
+					<input type="text" id="email" name="email" placeholder="john@example.com"> </div>
+				<div class="form-group">
+					<label for="telephone">Phone No:</label>
+					<input type="tel" name="telephone" id="telephone"> </div>
+				<div class="form-group">
+					<label for="message">Message</label>
+					<textarea id="message" name="msg" placeholder="Write your message here" style="height:170px; width:800px"></textarea>
+				</div>
+				<input type="submit" value="Submit" style="height:45px; width:100px"> </form>
+		</div>
+	</div>
+
+	<div id="Account" class="tabcontent">
+		<h3>Account</h3>
+		<p>Account page, will include registration, account profile section, etc etc. </p>
+		<form id="regForm">
+			<h1>Register:</h1>
+			<h1>Welcome! Log in or register</h1>
+			<div class="form-group">
+				<label for="user_username">Username</label>
+				<input type="text" name="userName" id="user_username"> </div>
+			<div class="form-group">
+				<label for="user_password">Password</label>
+				<input type="password" name="userPassword" id="user_password"> </div>
+			<button type="submit" class="btn-primary"> Log In </button>
+			<h1>Or</h1>
+			<div class="form-group"> <a href="register.html">Register</a> </div>
+		</form>
+		<div style="text-align:center;margin-top:40px;"> <span class="step"></span> <span class="step"></span> <span class="step"></span> <span class="step"></span> </div>
+	</div>
+  
+	<div id="About" class="tabcontent">
+		<h3>About</h3>
+		<p> This system was designed by the members of Group 16.
+			<br> The group members are as follows, along with our respective contributions:
+			<br>
+			<br>-Kyle Paul: Front End (HTML, JavaScript)
+			<br>-Mohammed Anam: Front End (HTML)
+			<br>-Luis Chavil: Back End(JavaScript, Database) </p>
+	</div>
+</body>
+
+</html>
